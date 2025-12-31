@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="home-container">
+        <div class="hero-content">
+            <h1>Evan Krupa</h1>
+            <p class="tagline">Data Engineer & Web Developer</p>
+
+            <img src="{% static 'images/techme.png' %}" alt="Evan Krupa" class="profile-image">
+
+            <p>
+                Scalable data pipelines, cloud-native systems,
+                and clean web applications using Python, Airflow, AWS, and Django.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="{% url 'contact' %}" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Data Engineering</h3>
+                <p>Python, Pandas, PyArrow, Airflow, SQL, ETL pipelines</p>
+            </div>
+            <div class="skill-card">
+                <h3>Cloud & DevOps</h3>
+                <p>AWS (S3, EC2, IAM), Docker, CI/CD</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend & Web</h3>
+                <p>Django, REST APIs, PostgreSQL</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Bike Share ETL Pipeline</h3>
+                <p>
+                    Automated Airflow pipeline ingesting bike-share data,
+                    transforming with Pandas and storing in S3.
+                </p>
+                <a href="{% url 'projects' %}">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Fixed Gear Blog on AWS EC2</h3>
+                <p>
+                    Django app deployed on AWS EC2 with Nginx, Gunicorn, PostgreSQL,
+                    and media handling.
+                </p>
+                <a href="{% url 'projects' %}">View Project →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Web Scraper to AWS S3 ETL</h3>
+                <p>
+                    Utilizing Beautiful Soup to web scrape quotes, convert to JSON and store in AWS S3 bucket.
+                </p>
+                <a href="{% url 'projects' %}">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Evan Krupa ·
+        <a href="https://github.com/">GitHub</a> ·
+        <a href="https://linkedin.com/">LinkedIn</a>
+    </footer>
+{% endblock %}

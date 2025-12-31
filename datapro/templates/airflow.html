@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <!-- Airflow Bike Share Project -->
+        <div class="project-card">
+            <img src="{% static 'images/etlsimple.png' %}" alt="Airflow Bike Share" class="project-image">
+            <h3>Airflow Bike Share ETL</h3>
+            <p>A fully automated ETL pipeline for bike share data using Apache Airflow. Extracts live data, transforms it into analytics-ready Parquet files, and loads it into S3/PostgreSQL for analysis.</p>
+            <ul>
+                <li>Python & Apache Airflow</li>
+                <li>Pandas & PyArrow for optimized data processing</li>
+                <li>Cloud Integration: AWS S3 & PostgreSQL</li>
+                <li>BytesIO for memory-efficient data handling</li>
+            </ul>
+            <a href="https://github.com/EKrupa/airflow_bikeshare_ETL_pipeline.git" class="btn" target="_blank">View on GitHub</a>
+        </div>
+
+        <!-- Example for another project -->
+        <div class="project-card">
+            {% load static %}
+            <img src="{% static 'images/surly.jpeg' %}" alt="Another Project" class="project-image">
+            <h3>Fixedgearsolace.com</h3>
+            <p>Deployed on AWS EC2 with Nginx, Gunicorn, PostgreSQL, and media handling. Utilizes affiliate links and gear recommendations.</p>
+            <ul>
+                <li>Python & Django</li>
+                <li>HTML & CSS</li>
+                <li>Cloud Integration: AWS EC2</li>
+                <li>Media Handling & Affiliate Links</li>
+            </ul>
+            <a href="https://github.com/EKrupa/fixedgearblog.git" class="btn" target="_blank">View On Github</a>
+        </div>
+        <div class="project-card">
+            <img src="{% static 'images/webscrapeetl.png' %}" alt="Another Project" class="project-image">
+            <h3>Web Scraper To AWS S3</h3>
+            <p>Utilizing Beautiful Soup to web scrape quotes, convert to JSON and store in AWS S3 bucket.</p>
+            <ul>
+                <li>Python</li>
+                <li>Beautiful Soup</li>
+                <li>Cloud Integration: AWS S3</li>
+                <li>Data Storage & JSON</li>
+            </ul>
+            <a href="https://github.com/EKrupa/ETLscapertoS3.git" class="btn" target="_blank">View On Github</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

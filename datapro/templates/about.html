@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Evan Krupa</title>
+    <link rel="stylesheet" href="about.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="about-container">
+        <section class="about-card">
+            <h1>About Me</h1>
+
+            <p>
+                I’m <strong>Evan Krupa</strong>, a Python-focused <strong>Data Engineer and Web Developer</strong>
+                with a passion for building scalable, data-driven systems and clean, user-centered applications.
+            </p>
+
+            <p>
+                My background bridges <strong>data engineering</strong> and <strong>web development</strong>,
+                allowing me to work comfortably across the stack. I design and orchestrate ETL pipelines using
+                <strong>Python, Apache Airflow, SQL</strong>, and deploy cloud-native solutions on
+                <strong>AWS</strong> (S3, EC2). I enjoy building reliable, production-ready data workflows
+                that support analytics and decision-making.
+            </p>
+
+            <p>
+                On the web side, I develop responsive applications with <strong>Django</strong>, HTML, CSS,
+                and JavaScript—focusing on clean architecture, readable code, and intuitive interfaces that
+                support complex backend logic.
+            </p>
+
+            <p>
+                Outside of tech, I’m a <strong>musician</strong> who plays <strong>guitar and piano</strong>,
+                and I enjoy riding my <strong>fixed gear bike</strong>. Music and cycling help shape how I
+                approach engineering—disciplined, creative, and always improving.
+            </p>
+
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Airflow</span>
+                <span>AWS</span>
+                <span>Django</span>
+                <span>SQL</span>
+                <span>HTML/CSS</span>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,309 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+  
+  :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --accent: #38bdf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            background: linear-gradient(180deg, #020617, #0f172a);
+            color: var(--text);
+            line-height: 1.6;
+    }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== HERO ===== */
+        .home-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 20%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin: 1.5rem 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+
+        .cta-buttons {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            background: var(--accent);
+            color: #020617;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--accent);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== PROJECTS ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: var(--muted);
+            border-top: 1px solid #1f2933;
+        }
+
+        .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+
+.project-card ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-card ul li {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+}
+
+/* Navbar wrapper */
+.navbar {
+  position: fixed;        /* stays across the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  z-index: 1000;
+  
+}
+
+/* Inner content */
+.nav-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  color: #e5e7eb;
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Horizontal links */
+.nav-links {
+  display: flex;          /* THIS forces horizontal layout */
+  flex-direction:row;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Link styles */
+.nav-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #9ca3af;
+}
+
+/* Prevent content from hiding under fixed nav */
+body {
+  padding-top: 64px;
+}
+
+
+/* about page */
+/* Layout */
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.about-card {
+    max-width: 900px;
+    background-color: var(--card);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Typography */
+.about-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.about-card p {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+}
+
+.about-card strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Tech stack pills */
+.tech-stack {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tech-stack span {
+    padding: 0.45rem 0.9rem;
+    background-color: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .about-card {
+        padding: 2rem;
+    }
+
+    .about-card h1 {
+        font-size: 2rem;
+    }
+}
