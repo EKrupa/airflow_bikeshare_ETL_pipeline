@@ -126,3 +126,26 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+
+
+# settings.py
+
+# Tell Django the request is secure when behind a proxy
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Redirect all HTTP to HTTPS
+SECURE_SSL_REDIRECT = True
+
+# Make cookies secure
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# Optional security settings
+SECURE_HSTS_SECONDS = 31536000  # HTTP Strict Transport Security
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
